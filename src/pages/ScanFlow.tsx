@@ -299,12 +299,7 @@ export default function ScanFlow() {
                   <div style={{ width: "100px", height: "100px", borderRadius: "50%",
                     background: biometricState === "success" ? "#16a34a18" : biometricState === "failed" || biometricState === "locked" ? "#ef444418" : "#16a34a10",
                     display: "flex", alignItems: "center", justifyContent: "center", transition: "background 0.3s ease" }}>
-                    <svg width="48" height="48" viewBox="0 0 256 256" fill="none">
-                      <path d="M128 32C74.98 32 32 74.98 32 128" stroke={biometricState === "success" ? "#16a34a" : biometricState === "failed" || biometricState === "locked" ? "#ef4444" : "#16a34a"} strokeWidth="14" strokeLinecap="round" opacity="0.3"/>
-                      <path d="M80 128c0-26.51 21.49-48 48-48s48 21.49 48 48c0 40-20 72-48 88" stroke={biometricState === "success" ? "#16a34a" : biometricState === "failed" || biometricState === "locked" ? "#ef4444" : "#16a34a"} strokeWidth="14" strokeLinecap="round" opacity="0.5"/>
-                      <path d="M104 128c0-13.25 10.75-24 24-24s24 10.75 24 24c0 32-12 56-24 72" stroke={biometricState === "success" ? "#16a34a" : biometricState === "failed" || biometricState === "locked" ? "#ef4444" : "#16a34a"} strokeWidth="14" strokeLinecap="round" opacity="0.7"/>
-                      <path d="M128 104v56" stroke={biometricState === "success" ? "#16a34a" : biometricState === "failed" || biometricState === "locked" ? "#ef4444" : "#16a34a"} strokeWidth="14" strokeLinecap="round"/>
-                    </svg>
+                    <Fingerprint size={48} weight="thin" color={biometricState === "success" ? "#16a34a" : biometricState === "failed" || biometricState === "locked" ? "#ef4444" : "#16a34a"} />
                   </div>
                 </div>
                 <div style={{ textAlign: "center", minHeight: "40px" }}>
